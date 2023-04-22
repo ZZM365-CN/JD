@@ -9,7 +9,6 @@
 20 13 * * 6 jd_get_share_code.js
 13 0,6,22 * * * jd_health.js.
 5 4,14 * * * jd_health_help.js
-12 12 * * * jd_jdjoypark.js
 3 1-23 * * * jd_joy_park_run.js
 30 0 * * * * jd_joy_park_run.ts
 21 9 * * * jd_gua_MMdou_Mod.js
