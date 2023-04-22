@@ -1,4 +1,4 @@
-30 21 * * * jd_bean_info.js
+30 21 * * * jd_bean_change.js
 0 7 * * * jd_bean_sign.js
 15 6-18/6 * * * jd_fruit.js
 0 7,19 * * * jd_speed_sign.js
