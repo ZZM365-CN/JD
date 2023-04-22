@@ -15,7 +15,6 @@
 13 0,6,22 * * * node /scripts/jd_get_health.js >> /scripts/logs/jd_health.log 2>&1
 5 4,14 * * * node /scripts/jd_health_help.js >> /scripts/logs/jd_health_help.log 2>&1
 3 1-23 * * * node /scripts/jd_joy_park_run.js >> /scripts/logs/jd_joy_park_run.log 2>&1
-30 0 * * * node /scripts/jd_joy_park_run.ts >> /scripts/logs/jd_joy_park_run.log 2>&1
 21 9 * * * node /scripts/jd_gua_MMdou_Mod.js >> /scripts/logs/jd_gua_MMdou_Mod.log 2>&1
 9 8 * * * node /scripts/jd_plus2bean.js >> /scripts/logs/jd_plus2bean.log 2>&1
 21 3 * * * node /scripts/jd_signbeanact.js >> /scripts/logs/jd_signbeanact.log 2>&1
