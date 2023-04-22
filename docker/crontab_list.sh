@@ -1,3 +1,8 @@
+# 每3天的23:50分清理一次日志(互助码不清理，proc_file.sh对该文件进行了去重)
+50 23 */3 * * find /scripts/logs -name '*.log' | grep -v 'sharecodeCollection' | xargs rm -rf
+# 收集助力码
+30 * * * * sh /scripts/docker/auto_help.sh collect >> /scripts/logs/auto_help_collect.log 2>&1
+
 30 21 * * * node /scripts/jd_bean_info.js >> /scripts/logs/jd_fruit.log 2>&1
 0 7 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
 15 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
