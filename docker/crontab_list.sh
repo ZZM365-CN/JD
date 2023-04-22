@@ -1,11 +1,11 @@
-30 21 * * * task bean_info
-0 7 * * * task bean_sign
-15 6-18/6 * * * task fruit
-0 7,19 * * * task speed_sign
-45 0 * * * task speed_sign
-15 7-21/2 * * * task plantBean
-41 21 * * * task prices
-23 1,18 * * * task bean_home
+30 21 * * * node /scripts/jd_bean_info.js >> /scripts/logs/jd_fruit.log 2>&1
+0 7 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
+15 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
+0 7,19 * * * node /scripts/jd_speed_coin.js >> /scripts/logs/jd_speed_coin.log 2>&1
+45 0 * * * node /scripts/jd_speed_sign.ts >> /scripts/logs/jd_speed_sign.log 2>&1
+10 7-22/1 * * * node /scripts/jd_plantBean.js >> /scripts/logs/jd_plantBean.log 2>&1
+41 21 * * * node /scripts/jd_prices.js >> /scripts/logs/jd_prices.log 2>&1
+23 1,18 * * * node /scripts/jd_bean_home.js >> /scripts/logs/jd_bean_home.log 2>&1
 20 13 * * 6 task get_share_code
 13 0,6,22 * * * task health
 5 4,14 * * * task health_help
