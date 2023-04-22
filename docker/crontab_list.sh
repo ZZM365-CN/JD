@@ -6,19 +6,19 @@
 10 7-22/1 * * * node /scripts/jd_plantBean.js >> /scripts/logs/jd_plantBean.log 2>&1
 41 21 * * * node /scripts/jd_prices.js >> /scripts/logs/jd_prices.log 2>&1
 23 1,18 * * * node /scripts/jd_bean_home.js >> /scripts/logs/jd_bean_home.log 2>&1
-20 13 * * 6 task get_share_code
-13 0,6,22 * * * task health
-5 4,14 * * * task health_help
-3 1-23 * * * task joy_park_run
-30 0 * * * task joy_park_run
-21 9 * * * task gua_MMdou_Mod
-9 8 * * * task plus2bean
-21 3 * * * task signbeanact
-30 7 * * * task jrsign
-30 18 * * * task joypark_synthesis
-50 7 * * * task joypark_task
-35 9 * * * task oy_withdraw
-35 8 * * * task dygetbeans
-5 5,10 * * * task club_lottery
-35 9 * * * task cash
-6 0,5 * * * task cash_wx
+20 13 * * 6 node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1
+13 0,6,22 * * * node /scripts/jd_get_health.js >> /scripts/logs/jd_health.log 2>&1
+5 4,14 * * * node /scripts/jd_health_help.js >> /scripts/logs/jd_health_help.log 2>&1
+3 1-23 * * * node /scripts/jd_joy_park_run.js >> /scripts/logs/jd_joy_park_run.log 2>&1
+30 0 * * * node /scripts/jd_joy_park_run.ts >> /scripts/logs/jd_joy_park_run.log 2>&1
+21 9 * * * node /scripts/jd_gua_MMdou_Mod.js >> /scripts/logs/jd_gua_MMdou_Mod.log 2>&1
+9 8 * * * node /scripts/jd_plus2bean.js >> /scripts/logs/jd_plus2bean.log 2>&1
+21 3 * * * node /scripts/jd_signbeanact.js >> /scripts/logs/jd_signbeanact.log 2>&1
+30 7 * * * node /scripts/jd_jrsign.js >> /scripts/logs/jd_jrsign.log 2>&1
+30 18 * * * node /scripts/jd_joypark_synthesis.js >> /scripts/logs/jd_joypark_synthesis.log 2>&1
+50 7 * * * node /scripts/jd_joypark_task.js >> /scripts/logs/jd_joypark_task.log 2>&1
+35 9 * * * node /scripts/jd_joy_withdraw.js >> /scripts/logs/jd_joy_withdraw.log 2>&1
+35 8 * * * node /scripts/jd_dygetbeans.js >> /scripts/logs/jd_dygetbeans.log 2>&1
+5 5,10 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
+35 9 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
+6 0,5 * * * node /scripts/jd_cash_wx.js >> /scripts/logs/jd_cash_wx.log 2>&1
