@@ -3,7 +3,7 @@
 # 收集助力码
 30 * * * * sh /scripts/docker/auto_help.sh collect >> /scripts/logs/auto_help_collect.log 2>&1
 
-30 21 * * * node /scripts/jd_bean_info.js >> /scripts/logs/jd_fruit.log 2>&1
+30 21 * * * node /scripts/jd_bean_info.js >> /scripts/logs/jd_info.log 2>&1
 0 7 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
 15 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
 0 7,19 * * * node /scripts/jd_speed_coin.js >> /scripts/logs/jd_speed_coin.log 2>&1
