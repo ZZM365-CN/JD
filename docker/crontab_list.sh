@@ -26,3 +26,4 @@
 35 9 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
 6 0,5 * * * node /scripts/jd_cash_wx.js >> /scripts/logs/jd_cash_wx.log 2>&1
 0 7,19 * * * node /scripts/jd_speed_sign.js >> /scripts/logs/jd_speed_coin.log 2>&1
+2 2 * * * node /scripts/jd_wxSignRed.js >> /scripts/logs/jd_speed_coin.log 2>&1
