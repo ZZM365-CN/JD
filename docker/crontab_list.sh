@@ -10,8 +10,8 @@
 41 21 * * * node /scripts/jd_prices.js >> /scripts/logs/jd_prices.log 2>&1
 23 1,18 * * * node /scripts/jd_bean_home.js >> /scripts/logs/jd_bean_home.log 2>&1
 20 13 * * 6 node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1
-13 0,6,22 * * * node /scripts/jd_get_health.js >> /scripts/logs/jd_health.log 2>&1
-5 4,14 * * * node /scripts/jd_health_help.js >> /scripts/logs/jd_health_help.log 2>&1
+13 0,6,22 * * * node /scripts/jd_health.js >> /scripts/logs/jd_health.log 2>&1
+5 4,14 * * * node /scripts/jd_health_collect.js >> /scripts/logs/jd_health_help.log 2>&1
 3 1-23 * * * node /scripts/jd_joy_park_run.js >> /scripts/logs/jd_joy_park_run.log 2>&1
 21 9 * * * node /scripts/jd_gua_MMdou_Mod.js >> /scripts/logs/jd_gua_MMdou_Mod.log 2>&1
 9 8 * * * node /scripts/jd_plus2bean.js >> /scripts/logs/jd_plus2bean.log 2>&1
