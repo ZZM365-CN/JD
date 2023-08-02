@@ -2,6 +2,7 @@ import axios from "axios"
 import {Md5} from "ts-md5"
 import * as dotenv from "dotenv"
 import {existsSync, readFileSync} from "fs"
+import {sendNotify} from './sendNotify'
 
 dotenv.config()
 const USER_AGENTS_ARR: string[] = [
@@ -153,9 +154,8 @@ function randomString(e: number, word?: number) {
   return n
 }
 
-function o2s(msg: object | string, title: string = '') {
-  title && console.log('⬇️', title, '⬇️')
-  typeof msg === 'string' ? console.log(msg) : console.log(JSON.stringify(msg))
+function o2s(arr: object, title: string = '') {
+  title ? console.log(title, JSON.stringify(arr)) : console.log(JSON.stringify(arr))
 }
 
 function randomNumString(e: number) {
@@ -179,7 +179,7 @@ async function getshareCodeHW(key: string) {
   let shareCodeHW: string[] = []
   for (let i = 0; i < 5; i++) {
     try {
-      let {data}: any = await axios.get('https://sharecodepool.cnmb.win/api/HW_CODES')
+      let {data}: any = await axios.get('https://api.jdsharecode.xyz/api/HW_CODES')
       shareCodeHW = data[key] || []
       if (shareCodeHW.length !== 0) {
         break
@@ -196,7 +196,7 @@ async function getShareCodePool(key: string, num: number) {
   let shareCode: string[] = []
   for (let i = 0; i < 2; i++) {
     try {
-      let {data}: any = await axios.get(`https://sharecodepool.cnmb.win/api/${key}/${num}`)
+      let {data}: any = await axios.get(`https://api.jdsharecode.xyz/api/${key}/${num}`)
       shareCode = data.data || []
       console.log(`随机获取${num}个${key}成功：${JSON.stringify(shareCode)}`)
       if (shareCode.length !== 0) {
@@ -312,6 +312,5 @@ export {
   jdpingou,
   get,
   post,
-  USER_AGENT,
   USER_AGENTS_ARR
 }
